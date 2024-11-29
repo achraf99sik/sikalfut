@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+<body class="">
+    <nav class="flex justify-between text-3xl p-3 shadow-md shadow-purple-200 mb-9">
+        <div>
+            <input type="search" placeholder="search" class="w-64 border-purple-300 border-2 rounded-lg pl-3 outline-purple-800">
+        </div>
+        <div class="flex gap-16">
+            <a href="404.html">Players</a>
+            <a href="404.html">Squad Builder</a>
+            <a href="404.html">Squads</a>
+        </div>
+        <div>
+            <button class="bg-purple-700 text-lg p-1 pr-3 pl-3 rounded-md text-white ">sign in</button>
+        </div>
+    </nav>
+    <div class="bg-gradient-to-b from-transparent to-purple-900">
+        <section class="flex gap-20 min-h-screen">
+            <div class="w-3/5 relative">
+                <div class="grid grid-cols-9 grid-rows-5">
+                    <div class="absolute z-0 w-full">
+                        <img src="assets/images/field-bg.svg" alt="">
+                    </div>
+                    <!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                    <button id="st" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full h-28 col-start-5 translate-y-4 transition-all duration-100  hover:scale-125">
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="lw" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-2 row-start-1 h-28 translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="rw" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-8 row-start-1 h-28 translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="cmc" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-5 row-start-2 h-28 translate-y-14 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="cml" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-3 row-start-2 h-28 translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="cmr" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-7 row-start-2 h-28 translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="lb" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-2 row-start-4 h-28  transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="cbl" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-4 row-start-4 h-28 -translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="cbr" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-6 row-start-4 h-28 -translate-y-5 transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="rb" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-8 row-start-4 h-28  transition-all duration-100  hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <button id="gk" onclick="add(this.id), playeradder(this.id)" class="z-10 relative w-full col-start-5 row-start-5 h-28 transition-all duration-100 hover:scale-125"><!-- CARD PLACE HOLDER AND INNER BUTTON -->
+                        <div class="h-full grid">
+                            <img class="absolute z-10 w-9/12 justify-self-center" src="assets/images/cardplace.webp" alt="">
+                            <div class="">
+                                <div class="relative z-20 flex items-center justify-center align-middle row-start-4 mt-8">
+                                    <span class="absolute"><svg class="w-7" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="#7600BC" stroke-width="1.5"></path></svg></span>
+                                    <div class="font-large text-purple-900  z-30">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <input type="search" placeholder="team name">
+                <select onchange="formtiongen()" name="formations" id="formation">
+                    <option value="433">4-3-3</option>
+                    <option value="442">4-4-2</option>
+                    <option value="352">3-5-2</option>
+                    <option value="532">5-3-2</option>
+                </select>
+                <div id="addform" class="grid gap-3 mt-10 bg-purple-950 rounded-md p-5 w-56">
+                    <input id="name" type="text" placeholder="player name">
+                    <input id="photo" type="text" placeholder="player photo url">
+                    <!-- <input id="position" type="text" placeholder="position"> -->
+                    <select name="" id="position">
+                        <option value="st">ST</option>
+                        <option value="lw">LW</option>
+                        <option value="rw">RW</option>
+                        <option value="cmc">CDM</option>
+                        <option value="cmr">CMR</option>
+                        <option value="cml">CML</option>
+                        <option value="lb">LB</option>
+                        <option value="rb">RB</option>
+                        <option value="cbl">CBL</option>
+                        <option value="cbr">CBR</option>
+                        <option value="gk">GK</option>
+                    </select>
+                    <input id="nationality" type="text" placeholder="nationality">
+                    <input id="flag" type="text" placeholder="flag url">
+                    <input id="club" type="text" placeholder="club">
+                    <input id="logo" type="text" placeholder="club logo url">
+                    <div class="grid grid-cols-3 gap-2">
+                        <input id="pac" type="number" placeholder="PAC" pattern="([1-9]{1}[0-9])" required>
+                        <input id="sho" type="number" placeholder="SHO">
+                        <input id="pas" type="number" placeholder="PAS">
+                        <input id="dri" type="number" placeholder="DRI">
+                        <input id="def" type="number" placeholder="DEF">
+                        <input id="phy" type="number" placeholder="PHY">
+                    </div>
+                    <button type="submit" id="formdata" onclick="newplayer()" class="bg-white rounded-sm">Ajouter</button>
+                </div>
+            </div>
+
+
+        </section>
+        <div id="addpop" onclick="cancle(event)" class="w-screen h-screen top-0 absolute justify-center gap-4 hidden">
+            <section id="playerSelect" class="w-11/12 h-11/12 bg-white z-50 mt-10 mb-10 flex gap-4 justify-center">
+                <button>cancle</button>
+            </section>
+        </div>
+    </div>
+    <footer  class="flex justify-between p-28 pt-10 pb-10">
+        <div class="grid">
+            <p class="font-black">LATEST SQUADS</p>
+            <a href="404.html">LC Pro</a>
+            <a href="404.html">Team Of The Week 10</a>
+            <a href="404.html">Track Stars</a>
+            <a href="404.html">Team of the Week</a>
+            <a href="404.html">Ballon d'Or</a>
+        </div>
+        <div class="grid">
+            <p class="font-black">USEFUL LINK</p>
+            <a href="404.html">Squad Builder</a>
+            <a href="404.html">SBC</a>
+            <a href="404.html">EA FC 25 Players</a>
+        </div>
+        <div class="grid">
+            <p class="font-black">FUT APPLICATIONS</p>
+            <a href="404.html">FUTBIN For Android</a>
+            <a href="404.html">FUTBIN For IOS</a>
+            <a href="404.html">More Details</a>
+        </div>
+    </footer>
+    <script src="assets/js/scrypt.js"></script>
+</body>
+</html>
