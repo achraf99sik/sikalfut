@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+<body class="">
+    <main class="">
+    <nav class="flex justify-between text-3xl p-3 shadow-md shadow-purple-200 mb-9">
+        <div>
+            <a  href="index.html"><span class="text-purple-700 font-black font-sans">F</span>oot<span class="text-purple-700 font-black font-sans">U</span>ltimaite<span class="text-purple-700 font-black font-sans">T</span>eam</a>
+        </div>
+        <div class="flex gap-16">
+            <a href="players.html">Players</a>
+            <a href="404.html">Squad Builder</a>
+            <a href="404.html">Squads</a>
+        </div>
+        <div>
+            <button onclick="rest()" class="bg-purple-700 text-lg p-1 pr-3 pl-3 rounded-md text-white transition-colors focus:bg-purple-300">Rest localstorage</button>
+        </div>
+    </nav>
+    
+    <!-- main content -->
+    <section id="playerlist" class="bg-white z-50 grid grid-cols-6 content-center gap-16 justify-center"></section>
+    
+    
+    <!-- footer -->
+    <footer  class="flex justify-between p-28 pt-10 pb-10">
+        <div class="grid">
+            <p class="font-black">LATEST SQUADS</p>
+            <a href="404.html">LC Pro</a>
+            <a href="404.html">Team Of The Week 10</a>
+            <a href="404.html">Track Stars</a>
+            <a href="404.html">Team of the Week</a>
+            <a href="404.html">Ballon d'Or</a>
+        </div>
+        <div class="grid">
+            <p class="font-black">USEFUL LINK</p>
+            <a href="404.html">Squad Builder</a>
+            <a href="404.html">SBC</a>
+            <a href="404.html">EA FC 25 Players</a>
+        </div>
+        <div class="grid">
+            <p class="font-black">FUT APPLICATIONS</p>
+            <a href="404.html">FUTBIN For Android</a>
+            <a href="404.html">FUTBIN For IOS</a>
+            <a href="404.html">More Details</a>
+        </div>
+    </footer>
+    </main>
+    <!-- modify form -->
+    
+    <div class="justify-end items-end flex">
+        <div id="modform" class="grid hidden gap-3 mt-10 bg-purple-950 rounded-md p-5 w-56 z-30 absolute top-0">
+            <input id="name" type="text" placeholder="player name">
+            <input id="photo" type="text" placeholder="player photo url">
+            <!-- <input id="position" type="text" placeholder="position"> -->
+            <select name="" id="position">
+                <option value="st">ST</option>
+                <option value="lw">LW</option>
+                <option value="rw">RW</option>
+                <option value="cmc">CDM</option>
+                <option value="cmr">CMR</option>
+                <option value="cml">CML</option>
+                <option value="lb">LB</option>
+                <option value="rb">RB</option>
+                <option value="cbl">CBL</option>
+                <option value="cbr">CBR</option>
+                <option value="gk">GK</option>
+            </select>
+            <input id="nationality" type="text" placeholder="nationality">
+            <input id="flag" type="text" placeholder="flag url">
+            <input id="club" type="text" placeholder="club">
+            <input id="logo" type="text" placeholder="club logo url">
+            <div class="grid grid-cols-3 gap-2">
+                <input id="pac" type="number" placeholder="PAC" pattern="([1-9]{1}[0-9])" required>
+                <input id="sho" type="number" placeholder="SHO">
+                <input id="pas" type="number" placeholder="PAS">
+                <input id="dri" type="number" placeholder="DRI">
+                <input id="def" type="number" placeholder="DEF">
+                <input id="phy" type="number" placeholder="PHY">
+            </div>
+            <input type="submit" id="formdata" onclick="modify()" class="bg-white rounded-sm" value="Ajouter">
+        </div>
+    </div>
+    <script src="assets/js/players.js"></script>
+</body>
+</html>
